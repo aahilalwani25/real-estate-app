@@ -1,0 +1,13 @@
+version: '3'
+services:
+  react-native:
+    build: .
+    ports:
+      - "8081:8081"
+    volumes:
+      - "C:/Users/AAHIL ALWANI/Desktop/Client Projects/Real Estate App/real_estate_app:/app"
+    devices:
+      - "/dev/bus/usb:/dev/bus/usb"
+    environment:
+      - JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+    privileged: true
