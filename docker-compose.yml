@@ -6,8 +6,12 @@ services:
       - "8081:8081"
     volumes:
       - "C:/Users/AAHIL ALWANI/Desktop/Client Projects/Real Estate App/real_estate_app:/app"
+      - "C:/Users/AAHIL ALWANI/AppData/Local/Android/Sdk:/usr/lib/android-sdk"
+      - "C:/Program Files/Java/jdk-17:/usr/lib/jvm/java-17-openjdk"
     devices:
       - "/dev/bus/usb:/dev/bus/usb"
     environment:
+      - ANDROID_SDK_ROOT=/usr/lib/android-sdk
       - JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+      - PATH=/usr/lib/android-sdk/platform-tools:/usr/lib/jvm/java-17-openjdk/bin:$PATH
     privileged: true
